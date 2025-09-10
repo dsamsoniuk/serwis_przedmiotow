@@ -1,0 +1,14 @@
+certifi==2025.8.3
+charset-normalizer==3.4.3
+dotenv==0.9.9
+greenlet==3.2.4
+idna==3.10
+PySide6==6.9.2
+PySide6_Addons==6.9.2
+PySide6_Essentials==6.9.2
+python-dotenv==1.1.1
+requests==2.32.5
+shiboken6==6.9.2
+SQLAlchemy==2.0.43
+typing_extensions==4.15.0
+urllib3==2.5.0

@@ -1,0 +1,7 @@
+/build/
+/dist/
+/env/
+/env_serwisant/
+__pycache__
+example.db
+app.log
