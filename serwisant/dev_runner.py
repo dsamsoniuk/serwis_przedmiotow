@@ -8,13 +8,8 @@ from app import main
 # Uruchom projekt w trybie watch
 # python dev_runner.py
 
-
 def run():
     main()
-    # app = QtWidgets.QApplication(sys.argv)
-    # window = MainApp()
-    # window.show()
-    # sys.exit(app.exec())
 
 if __name__ == "__main__":
     run_process('.', target=run)
