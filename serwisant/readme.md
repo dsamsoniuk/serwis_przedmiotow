@@ -1,5 +1,9 @@
 
 
+# Aplikacja desktop (Qt)
+
+Aplikacja pozwala na pobieranie, wyswietlanie oraz edycje towaru dostepnych w Api (FastApi). Demonstracja mozliwości łączenia api z programem. 
+
 
 ### Skroty
 
