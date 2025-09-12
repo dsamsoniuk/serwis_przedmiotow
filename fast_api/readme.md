@@ -1,30 +1,40 @@
 
 
-tutorial
+# Projekt FastApi + JWT
 
-https://blog.stackademic.com/using-fastapi-with-sqlalchemy-5cd370473fe5
+
+## Install
+
+1. docker compose up
+2. create venv venv/
+3. make migration seed.py
+
+docker exec -it bash // to container console
+docker exec -it pip list
+docker exec -it api_fastapi alembic --version // execute once command
+docker exec -it api_fastapi alembic upgrade head // execute once command
+docker exec -it api_fastapi python seed.py // execute once command
 
 
 ### Create env project
 
-python venv -m env
+python -m venv  venv
 
 ### Get in to envirement
 
 source env/bin/active
 
-### Run server
-
-fastapi dev main.py
-
-
 ### Seed fake data
 
-python api/seed.py
+python seed.py
 
-### Display docs
+### Display docs and debug
 
-http://localhost:8000/redoc
+
+http://localhost:80/redoc
+
+// debugger port
+http://localhost:8000
 
 
 ### Generate migration
@@ -42,3 +52,8 @@ pip freeze > requirements.txt
 
 // install all
 pip install -r requirements.txt
+
+
+### Helped
+
+https://blog.stackademic.com/using-fastapi-with-sqlalchemy-5cd370473fe5

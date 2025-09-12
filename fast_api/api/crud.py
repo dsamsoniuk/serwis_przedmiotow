@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-import models, schemas
+import api.models as models, api.schemas as schemas
 from passlib.context import CryptContext
 
 # Item

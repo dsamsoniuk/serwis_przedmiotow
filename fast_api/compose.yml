@@ -1,31 +1,27 @@
 services:
-  # Serwer MySQL
-  mysql:
+  db:
     image: mysql:8.0
     container_name: mysql_fastapi
     environment:
-      MYSQL_ROOT_PASSWORD: fastapi      # Hasło roota
-      MYSQL_DATABASE: fastapi    # Nazwa domyślnej bazy danych
-      MYSQL_USER: fastapi               # Nazwa użytkownika
-      MYSQL_PASSWORD: fastapi       # Hasło użytkownika
+      MYSQL_ROOT_PASSWORD: fastapi 
+      MYSQL_DATABASE: fastapi   
+      MYSQL_USER: fastapi             
+      MYSQL_PASSWORD: fastapi  
     volumes:
-      - db-data:/var/lib/mysql       # Dane przechowywane na wolumenie
+      - db-vol:/var/lib/mysql   
     ports:
-      - "3306:3306"                 # Mapowanie portu MySQL
-  python:
+      - "3306:3306"              
+  app:
     build:
         context: .
+    container_name: api_fastapi
     volumes:
-      - ./:/var/www/html          # Montowanie aplikacji z lokalnego folderu
-      - "~/.ssh:/root/.ssh"
+      - .:/code       
     ports:
-      - "80:80"                 # Mapowanie portu MySQL
+      - "80:80"                
     depends_on:
-      - mysql                        # Uruchamia się po MySQL
-
-
-    ## Jak uruchomic alembic w konenerze!!!!!!!!!!!!!!
-    # command: bash -c "cd /code && alembic upgrade head"
+      - db                      
 
 volumes:
-  db-data:                           # Definicja wolumenu dla danych MySQL
+  # - app-vol:/app
+  db-vol:
