@@ -1,4 +1,4 @@
-# Aplikacja desktop + Api -- Python
+# Aplikacja desktop (QT) + Api (FastApi) -- Python
 
 Aplikacja desktop pozwala na logowanie do api oraz pobieranie i edycje przedmiotów i przesyłania zmian na serwer.
 
@@ -9,16 +9,16 @@ Aplikacja desktop pozwala na logowanie do api oraz pobieranie i edycje przedmiot
 
 * python 3
 * pip
-
+* docker
 
 ### Tworzenie środowiska
 
 ```
 cd fast_api/
-python -m venv env
+czytamu readme.md
 
 cd serwisant/
-python -m venv env
+czytamu readme.md
 ```
 
 
