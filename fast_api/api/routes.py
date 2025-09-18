@@ -17,12 +17,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
 '''Main'''
 router = APIRouter(tags=["Main"])
 
-@router.get("/", 
-            summary="Ogolne endpoint-y", 
-            description="""
-            Tutaj jest zwykly opis ![Logo](/static/logo-teal.png)
-            """
-)
+@router.get("/")
 async def root():
     return {"message": "Hello World !!!"}
 
@@ -51,7 +46,12 @@ async def login_for_access_token(
 '''User'''
 router_user = APIRouter(tags=["user"])
 
-@router_user.get("/users/me/", response_model=User)
+@router_user.get("/users/me/", response_model=User,   
+            summary="Ogolne endpoint-y", 
+            description="""
+            Tutaj jest zwykly opis ![Logo](/static/logo-teal.png)
+            """
+)
 async def read_users_me(
     current_user: Annotated[User, Depends(get_current_active_user)],
 ):

@@ -56,6 +56,12 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
+### Test 
+
+```
+pytest
+```
+
 ### Helped
 
 https://blog.stackademic.com/using-fastapi-with-sqlalchemy-5cd370473fe5
