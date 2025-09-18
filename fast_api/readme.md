@@ -9,12 +9,13 @@
 2. create venv venv/
 3. make migration seed.py
 
+```
 docker exec -it bash // to container console
 docker exec -it pip list
 docker exec -it api_fastapi alembic --version // execute once command
 docker exec -it api_fastapi alembic upgrade head // execute once command
 docker exec -it api_fastapi python seed.py // execute once command
-
+```
 
 ### Create env project
 
@@ -30,12 +31,12 @@ python seed.py
 
 ### Display docs and debug
 
-
+```
 http://localhost:80/redoc
 
 // debugger port
 http://localhost:8000
-
+```
 
 ### Generate migration
 
@@ -48,11 +49,12 @@ alembic upgrade head
 
 ### Generate requirements
 
+```
 pip freeze > requirements.txt
 
 // install all
 pip install -r requirements.txt
-
+```
 
 ### Helped
 
