@@ -2,9 +2,9 @@ from pydantic import BaseModel
 
 class ItemBase(BaseModel):
     name: str
-    description: str
-    price: float
-    tax: float
+    description: str = None
+    price: float 
+    tax: float 
     
 class ItemCreate(ItemBase):
     pass   
@@ -29,9 +29,9 @@ class TokenData(BaseModel):
 
 class User(BaseModel):
     username: str
-    email: str | None = None
-    full_name: str | None = None
-    disabled: bool | None = None
+    email: str 
+    full_name: str = None
+    disabled: bool 
 
 class UserInDB(User):
     hashed_password: str

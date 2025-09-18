@@ -32,7 +32,7 @@ def get_password_hash(password):
 
 def get_user(db, username: str):
 
-    user_dict = crud.get_user(db=db, username=username)
+    user_dict = crud.UserCrud.get_user(db=db, username=username)
     if user_dict:
         return user_dict
 
