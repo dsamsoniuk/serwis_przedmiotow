@@ -40,12 +40,19 @@ http://localhost:8000
 
 ### Generate migration
 
+UWAGA! alembic tylko uzywac przez konsole docker
+
+```
 alembic revision --autogenerate -m "create items table"
 
-Update database
+// Update database
 
 alembic upgrade head
 
+alembic history
+
+alembic downgrade -1
+```
 
 ### Generate requirements
 

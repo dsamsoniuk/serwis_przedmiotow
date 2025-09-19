@@ -29,3 +29,5 @@ if __name__ == "__main__":
     db: Session = next(get_db())  
     seedUsers(db)
     seedItems(db)
+
+    print('Success, updated!')
